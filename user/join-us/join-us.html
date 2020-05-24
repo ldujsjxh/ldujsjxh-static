@@ -18,11 +18,102 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <style> 
+      #myform {
+          padding-top: 70px;
+      }
+      body {
+          background-image: url("1.jpg");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-attachment: fixed;
+          background-size: cover;
+      }
+      .all{
+        border-radius: 15px;
+        border-color:lightskyblue;
+        background-color: white;
+      }
+      .bg-danger{
+        background-color:tomato;
+      }
+  </style>
 </head>
 <body>
 <!--头部导航栏-->
 <section id="navigation"></section>
 
+<div class="container"> 
+  
+  <div class="row">
+  <div class="col-md-4">
+  </div>
+      <div class="col-md-4">
+          <form id="myform" action="regis.jsp" method="post" onsubmit="return checkAll()">
+                <h1 class="page-header">计算机协会报名表</h1>
+                姓名:
+                <input type="text" name="name" class="all" id="name" onblur="checkName()" required="required" style="width: 120px;height:25px">
+                  &nbsp &nbsp性别：
+                  <input type="radio" name="sex" value="男生">男
+                  <input type="radio" name="sex" value="女生">女
+                  </br>
+                  </br>
+                  学院：<input type="text" name="xueyuan" id="yuanxi" class="all" required="required" style="width: 268px;height:30px">
+                  </br>
+                  </br>
+                  班级：<input type="text" name="class" id="class" class="all" placeholder="例如：计本1801" required="required" style="width: 268px;height:30px">
+                  </br>
+                  </br>
+                  籍贯：<input type="text" name="jiguan" class="all" id="jiguan" placeholder="××省××市××其他" required="required" style="width: 268px;height:30px">
+                  </br>
+                  </br>
+
+                  出生年月：<input type="text" name="birth" class="all" id="birth" placeholder="例如：2001-01-01" required="required" style="width: 235px;height:30px">
+                  </br>
+                  </br>
+                  QQ号：<input type="text" name="QQ号" id="qq" class="all" required="required" style="width: 260px;height:30px">
+                  </br>
+                  </br>
+                  邮箱：<input type="text" name="email" id="email" class="all" required="required" style="width: 267px;height:30px">
+                  </br>
+                  </br>
+                  手机号：<input type="text" name="telephone" class="all" id="telephone" placeholder="填经常使用的哦" required="required" style="width: 250px;height:30px">
+                  </br>
+                  </br> 
+                  意向部门:
+                  <select style="width: 245px;height:35px" class="all">
+                    <option>网络部</option>
+                    <option>视频部</option>
+                    <option>美编部</option>
+                    <option>硬件部</option>
+                    <option>秘书处</option>
+                    <option>自媒体运营部</option>
+                  </select>
+                  </br>
+                  </br>
+                  爱好：</br><textarea name="爱好" id="hobby" class="all" required="required" style="width: 310px;height:80px"></textarea>
+                  </br>
+                  </br>
+                 
+                  加入该部门的理由：</br><textarea name="reason" class="all" required="required" style="width: 310px;height:200px;"></textarea>
+                  </br>
+                  </br>
+                  自我介绍：</br><textarea name="hope" class="all" required="required" style="width: 310px;height:200px"></textarea>
+                  </br>
+                  </br>
+                  目前掌握的计算机技能：</br><textarea name="hope" class="all" required="required" style="width: 310px;height:130px"></textarea>
+                  </br>
+                  </br>
+                  <input id="submit" name="submit" type="submit" value="提交申请" class="bg-danger">
+           
+          </form>
+      </div>
+    
+      <div class="col-md-4">
+      </div>
+  </div>
+
+</div>
 
 
 <!--common JavaScript files 注意bootstrap.bundle.js集成了Poper-->
