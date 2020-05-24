@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png?3">
+    <title> 部门介绍 </title>
+    <link href="js/app.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.js" rel="preload" as="script">
+    <!-- 引入jQuery -->
+    <script src="../common/js/jquery/jquery-3.4.1.min.js"></script>
 </head>
+
 <body>
 
+    <!-- 引入头部导航栏代码 start -->
+    <!-- 头部导航栏 -->
+    <section id="navigation"></section>
+    <script>
+        $(function() {
+            // $('#aaa').load('../index.html');
+            // 加载导航栏
+            $('#navigation').load('./navigation.html');
+        });
+    </script>
+    <!-- 引入头部导航栏代码 end -->
+
+
+
+    <!-- 主体内容 -->
+    <div id="department-introduce"></div>
+    <!-- vue生成的js -->
+    <script type="text/javascript" src="js/chunk-vendors.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
+
 </html>
