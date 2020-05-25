@@ -1,0 +1,29 @@
+.title{
+    text-align: center;
+}
+
+.tm-welcome-left {
+    padding-top: 0px;
+    padding-right: 30px;
+    
+    padding-bottom: 50px;
+    
+}
+.tm-welcome-title{
+    color:#0000ff;
+    text-shadow:#00e5ff 5px 5px 3px;
+    margin-bottom: 40px;
+}
+.tm-welcome-right {
+    color: white;
+    background-color: #986665;
+    padding: 50px 43px 40px;
+    height: 100%;
+}
+.card {
+    width:50px;
+    height:30px;
+    text-align:center
+    margin-top: 30px;
+    margin-bottom: 30px;
+}

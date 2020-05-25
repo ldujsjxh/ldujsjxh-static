@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>header</title>
+    <meta name="description" content="Pitch is a beautiful Bootstrap 4 template for startup pre-launch landing pages."/>
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700,800" rel="stylesheet">
+
+    <!--vendors styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="css/blue.css" id="theme-color">
+    <style>
+      .theme-popover {
+        background-color: blue;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<script>
+    /*jQuery(document).ready(function($) {
+
+      $('.theme-popover-mask').fadeOut(100);
+      $('.theme-popover').slideUp(200);
+
+      $(".theme-login").click(function(){
+        $(".theme-popover-mask").fadeIn(100);
+        $('.theme-popover').slideDown(200);
+      })
+      $(".close").click(function(){
+        $('.theme-popover-mask').fadeOut(100);
+        $('.theme-popover').slideUp(200);
+      })
+    })*/
+    $('#exampleModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) // Button that triggered the modal
+      var recipient = button.data('whatever') // Extract info from data-* attributes
+      // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+      // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+      var modal = $(this)
+      modal.find('.modal-title').text('New message to ' + recipient)
+      modal.find('.modal-body input').val(recipient)
+})
+</script>
+<body>
+    <section class="smart-scroll">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand heading-black" href="index.html">
+                    计算机协会
+                </a>
+                <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+                        data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span data-feather="grid"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="">主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <!--<a class="nav-link page-scroll" href="#features">社团介绍</a>-->
+                            <a class="nav-link page-scroll" href="社团介绍.html" target="_blank">社团介绍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="部门介绍.html" target="_blank">部门介绍</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="联系我们.html">联系我们</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link page-scroll" href="加入我们.html">加入我们</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline">
+                      <!--href="javascript:;-->
+                        <a class="btn btn-primary theme-login "  data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" >鲁小C:2772136373</a>
+                    </form>
+                </div>
+            </nav>
+            <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+            <script src="js/scripts.js"></script>-->
+        </div>
+    </section>
+    
+    <div class="container">
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="exampleModalLabel">您的联系方式</h4>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="control-label">电话:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="message-text" class="control-label">QQ号:</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Send message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="container">
+      <div class="theme-popover ">
+        
+        <div class="theme-popbod dform">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="inputEmail3" class="control-label">请登录</label>
+                    <button type="button" class="close href="javascript:;" aria-label="Close">&times;</button>
+                    <!--<h5>请登录</h5>-->
+                  <!--</div>-->
+                  
+                    
+                  
+                <!--</div>
+                
+                
+                
+              </div>
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-2 control-label">电话</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-2 control-label">QQ</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputPassword3" placeholder="Password">
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">确定</button>
+                  </div>
+                </div>
+              </form>
+        </div>
+        
+      </div>
+      <div class="theme-popover-mask">
+      </div>
+    </div>-->
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    
+
+
+</body>
+</html>
+
+
+<!--<iframe src="header.html" 
+    align="left" frameBorder="0" scrolling="no" 
+    vspace="-80" hspace="-80" width="100%" 
+    marginheight="1" marginwidth="1"></iframe>-->
