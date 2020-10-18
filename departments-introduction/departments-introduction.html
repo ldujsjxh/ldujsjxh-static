@@ -1,10 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title> 部门介绍 </title>
+    <link href="js/app.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.js" rel="preload" as="script">
+
+    <link rel="shortcut icon" href="/common/images/favicon.ico">
+    <!-- 引入需要的css文件 -->
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="/common/css/bootstrap/bootstrap.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/common/css/theme-css/style.default.css" id="theme-stylesheet">
+
+    <!-- 在导航栏自定义nav-container类替代bootstrap原本的container类 -->
+    <style>
+        .nav-container {
+            /* 解决宽度问题 */
+            padding-left: 10%!important;
+            padding-right: 10%!important;
+            box-sizing: border-box;
+            /* 解决解决区分度不明显问题 */
+            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px!important;
+        }
+    </style>
 </head>
+
 <body>
 
+    <!-- 头部导航栏 -->
+    <section id="navigation"></section>
+    <div id="bottom-of-nav"></div>
+    <!-- 引入头部导航栏代码 end -->
+
+    <div id="department-introduce"></div>
+    <!-- built files will be auto injected -->
+    <script type="text/javascript" src="js/chunk-vendors.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    <!--common JavaScript files 注意bootstrap.bundle.js集成了Poper-->
+    <script src="/common/js/jquery/jquery-3.4.1.min.js"></script>
+    <!-- 让小屏幕设备中可以点击展开菜单 -->
+    <script src="/common/js/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function() {
+            // 加载导航栏
+            $('#navigation').load('/navigation.html', function() {
+                // 导航栏修饰
+                // console.log('navbar', $('#navigation nav'));
+                $('#navigation nav').removeClass('fixed-top');
+                $('#navigation nav').removeClass('container');
+                $('#navigation nav').addClass('nav-container');
+                // 让屏幕下滚的距离大于导航栏的高度时，让导航栏始终出现在屏幕上方（使用flex布局），否则使用普通布局 --start
+                // 获取导航栏高度
+                var box_top = $("#bottom-of-nav").offset().top;
+                var flag = true;
+                $(window).scroll(function() {
+                    if ($(document).scrollTop() >= box_top) {
+                        // 卷去头部
+                        $(".nav-container").addClass('fixed-top');
+                        if (flag) {
+                            $(".nav-container").stop().fadeOut(0);
+                            $(".nav-container").stop().fadeIn();
+                            flag = false;
+                        }
+                    } else {
+                        // 未卷去头部
+                        $(".nav-container").removeClass('fixed-top');
+                        flag = true;
+                    }
+                });
+                // --end
+
+                //点击按钮隐藏或显示菜单栏, 暂时没用
+                $('.sidebar-toggler').click(function() {
+                    $('.sidebar').toggleClass('shrink show');
+                });
+            });
+
+        });
+    </script>
 </body>
+
 </html>

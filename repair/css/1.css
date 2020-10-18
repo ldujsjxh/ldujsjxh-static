@@ -1,0 +1,38 @@
+.xybz {
+    width: 400px;
+    /* height: 200px; */
+    font-size: x-large;
+    /* color: white; */
+}
+
+
+/* 你需要帮助吗？ */
+
+.baise {
+    color: white;
+}
+
+.ls {
+    color: #19CAAD;
+}
+
+
+/* 颜色 */
+
+.cykjj {
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* 常用快捷键 */
+
+.nav-container {
+    /* 解决宽度问题 */
+    padding-left: 10%!important;
+    padding-right: 10%!important;
+    box-sizing: border-box;
+    /* 解决解决区分度不明显问题 */
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px!important;
+}

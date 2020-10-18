@@ -1,7 +1,6 @@
 <!--头部导航栏-->
 <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light container">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headNavbarMenu"
-            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headNavbarMenu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <a class="nav-link text-lg text-primary navbar-brand" href="#">鲁东大学计算机协会</a>
@@ -9,20 +8,27 @@
     <div class="collapse navbar-collapse" id="headNavbarMenu">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="#">主页</a>
+                <a class="nav-link" href="/index.html">主页</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/association-introduction/association-introduction.html">社团介绍</a>
+                <a class="nav-link" href="/association-introduction/club-introduce.html">社团介绍</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/departments-introduction/departments-introduction.html">部门介绍</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link disabled" href="/user/join-us/join-us.html">加入我们</a>
+                <a class="nav-link" href="/repair/repair.html">义务维修</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact-us/contact-us.html">联系我们</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/join-us/join-us.html">加入我们</a>
             </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <button class="btn btn-primary my-2 my-sm-0">登录|注册</button>
+        <!-- 因为咱不可用，此处隐藏登录注册按钮 -->
+        <form class="form-inline my-2 my-lg-0" style="display: none;">
+            <button class="btn btn-primary my-2 my-sm-0" id="login_and_register">登录|注册</button>
         </form>
     </div>
 </nav>
@@ -31,7 +37,17 @@
 <!--侧边菜单栏伸缩-->
 <script>
     //点击按钮隐藏或显示菜单栏, 暂时没用
-    $('.sidebar-toggler').click(function () {
+    $('.sidebar-toggler').click(function() {
         $('.sidebar').toggleClass('shrink show');
+    });
+
+    // 登录按钮点击提示该功能暂未开放
+    var loginBtn = $('#login_and_register');
+
+    //设置点击事件
+    loginBtn.on('click', function(e) {
+        // 解除表单默认事件
+        e.preventDefault()
+        alert('该功能暂未开放');
     });
 </script>
