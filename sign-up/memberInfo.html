@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计协报名信息登记</title>
+    <link rel="stylesheet" href="extrajs/popper.min.js">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/memberInfo.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-light bg-light association-nav my-navbar">
+        <a class="navbar-brand " href="#">
+            <img src="images/logo_sm.png" width="30" height="30" class="d-inline-block align-top" loading="lazy"> 计协报名信息登记
+        </a>
+    </nav>
+
+    <div class="container main-box">
+        <!-- 表单 -->
+        <div class="my-card">
+
+
+            <form id="#info_form">
+                <div class="form-group">
+                    <label for="candidateName">姓名</label>
+                    <input type="text" class="form-control" id="candidateName" name="candidateName">
+                </div>
+                <div class="form-group">
+                    <label for="candidateStuId">学号</label>
+                    <input type="number" class="form-control" id="candidateStuId" name="candidateStuId">
+                </div>
+                <div class="form-group">
+                    <label for="candidateAcademy">学院</label>
+                    <input type="text" class="form-control" id="candidateAcademy" name="candidateAcademy">
+                </div>
+                <div class="form-group">
+                    <label for="candidateClass">班级</label>
+                    <input type="text" class="form-control" id="candidateClass" name="candidateClass">
+                </div>
+                <div class="form-group">
+                    <label for="desirableDepartment">意向部门</label>
+                    <select class="form-control" id="desirableDepartment" name="desirableDepartment">
+                    <option value="blank">请选择...</option>
+                    <option value ="秘书处">秘书处</option>
+                    <option value ="硬件部">硬件部</option>
+                    <option value ="视频部">视频部</option>
+                    <option value ="美编部">美编部</option>
+                    <option value ="网络部">网络部</option>
+                    <option value ="宣传部">宣传部</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="candidateObeyAdjust">是否服从调剂</label>
+                    <select class="form-control" id="candidateObeyAdjust" name="candidateObeyAdjust">
+                    <option value="blank">请选择...</option>
+                    <option value ="0">服从</option>
+                    <option value ="1">不服从</option>
+                  </select>
+                </div>
+
+                <div class="alert alert-danger" role="alert">
+                    请仔细检查信息是否正确，只能提交一次，且提交后不可修改
+                </div>
+                <button class="btn btn-primary" id="submit_form">确认提交</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="toast" role="alert" data-autohide="false" id="tip_toast">
+        <div class="toast-header">
+            <img src="images/logo_sm.png" class="association-toast-icon" style="width: 25px;">
+            <strong class="mr-auto">提示</strong>
+            <small>刚刚</small>
+            </button>
+        </div>
+        <div class="toast-body">
+            <div class="progress" id="toast_progress_bar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+            <div id="toast_content">正在加载。。。</div>
+
+        </div>
+    </div>
+
+
+    <script src="extrajs/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/memberInfo.js"></script>
+</body>
+
+</html>

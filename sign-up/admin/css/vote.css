@@ -1,0 +1,53 @@
+.vote-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+}
+
+.logo {
+    height: 50px;
+    display: block;
+    margin: 10px auto;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 45px;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ccc;
+    background-color: #F7F7F7;
+}
+
+.contentBox {
+    /* background-color: pink; */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.info-item {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#submit-score {
+    float: right;
+}
+
+.refresh {
+    float: right;
+    color: rgb(23, 117, 248);
+    cursor: pointer;
+}

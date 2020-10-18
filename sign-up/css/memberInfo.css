@@ -1,0 +1,27 @@
+body {
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.my-navbar {
+    margin-bottom: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+}
+
+.main-box {
+    padding: 10px;
+}
+
+.my-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+    padding: 20px;
+}
+
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+}

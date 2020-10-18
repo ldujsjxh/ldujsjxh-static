@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #F6F6F6;
+}
+
+
+/* toast框的样式  ---start*/
+
+.toast {
+    width: 300px;
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.association-toast-icon {
+    display: block;
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+/* toast框的样式  ---end*/

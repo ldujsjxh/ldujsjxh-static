@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计协面试控制台</title>
+    <link rel="stylesheet" href="../extrajs/popper.min.js">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/interview.css">
+</head>
+
+<body>
+    <!-- 头部导航栏 -->
+    <nav class="navbar navbar-light bg-light association-nav">
+        <a class="navbar-brand " href="#">
+            <img src="../images/logo_sm.png" width="30" height="30" class="d-inline-block align-top" loading="lazy"> 计协面试控制台
+        </a>
+    </nav>
+
+    <!-- 主体内容 -->
+    <div class="candidate-content">
+
+        <div class="row ">
+            <div class="col-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-secretary" role="tab">秘书处</a>
+                    <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-hardware" role="tab">硬件部</a>
+                    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-video" role="tab">视频部</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-art" role="tab">美编部</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-net" role="tab">网络部</a>
+                    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-propaganda" role="tab">宣传部</a>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="row candidates-summary">
+                    <div class="col-4">总人数：<span id="all_count">100</span></div>
+                    <div class="col-4">已面试人数：<span id="done_count">100</span></div>
+                    <div class="col-4">未面试人数：<span id="undone_count">100</span></div>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-secretary" role="tabpanel">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">姓名</th>
+                                    <th scope="col">学号</th>
+                                    <th scope="col">学院</th>
+                                    <th scope="col">意向部门</th>
+                                    <th scope="col">是否已经面试</th>
+                                    <th scope="col">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-hardware" role="tabpanel">...</div>
+                    <div class="tab-pane fade" id="v-pills-video" role="tabpanel">...</div>
+                    <div class="tab-pane fade" id="v-pills-art" role="tabpanel">...</div>
+                    <div class="tab-pane fade" id="v-pills-net" role="tabpanel">...</div>
+                    <div class="tab-pane fade" id="v-pills-propaganda" role="tabpanel">...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="toast" role="alert" data-autohide="false" id="tip_toast">
+        <div class="toast-header">
+            <img src="../images/logo_sm.png" class="association-toast-icon">
+            <strong class="mr-auto">提示</strong>
+            <small>刚刚</small>
+            </button>
+        </div>
+        <div class="toast-body">
+            <div class="progress" id="toast_progress_bar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+            <div id="toast_content">正在加载。。。</div>
+
+        </div>
+    </div>
+
+    <script src="../extrajs/jquery-3.4.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/interview.js"></script>
+</body>
+
+</html>

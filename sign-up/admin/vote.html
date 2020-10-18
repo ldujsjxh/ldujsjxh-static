@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面试打分</title>
+    <link rel="stylesheet" href="../extrajs/popper.min.js">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/vote.css">
+</head>
+
+<body>
+    <div class="vote-box">
+        <img src="../images/logo.png" class="logo" alt="">
+        <div class="contentBox">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-dark mb-3" style="max-width: 30rem;">
+                        <div class="card-header">
+                            <span>面试人信息</span>
+                            <span class="refresh" id="refresh">刷新</span>
+                        </div>
+                        <div class="card-body text-dark">
+                            <h5 class="card-title" id="name">姓名</h5>
+                            <div class="info-item">学号：
+                                <strong id="stu_id"></strong></div>
+                            <div class="info-item">学院：<strong id="academy"></strong></div>
+                            <div class="info-item">意向部门：<strong id="part"></strong></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-primary mb-3" style="max-width: 30rem;">
+                        <div class="card-header">打分面板</div>
+                        <div class="card-body text-primary">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputAttitudeSelect">态度</label>
+                                </div>
+                                <select class="custom-select" id="inputAttitudeSelect" disabled>
+                                  <option selected>选择分数...</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value="10">10</option>
+                                </select>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputAbilitySelect">能力</label>
+                                </div>
+                                <select class="custom-select" id="inputAbilitySelect" disabled>
+                                  <option selected>选择分数...</option>
+                                  <option value="1">1</option>
+                                  <option value="2">2</option>
+                                  <option value="3">3</option>
+                                  <option value="4">4</option>
+                                  <option value="5">5</option>
+                                  <option value="6">6</option>
+                                  <option value="7">7</option>
+                                  <option value="8">8</option>
+                                  <option value="9">9</option>
+                                  <option value=10>10</option>
+                                </select>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="submit-score" disabled>提交分数</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <small class="text-muted">鲁东大学计算机协会面试打分</small>
+        </div>
+    </div>
+
+    <div class="toast" role="alert" data-autohide="false" id="tip_toast">
+        <div class="toast-header">
+            <img src="../images/logo_sm.png" class="association-toast-icon">
+            <strong class="mr-auto">提示</strong>
+            <small>刚刚</small>
+            </button>
+        </div>
+        <div class="toast-body">
+            <div class="progress" id="toast_progress_bar">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+            <div id="toast_content">正在加载。。。</div>
+        </div>
+    </div>
+
+    <script src="../extrajs/jquery-3.4.1.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/vote.js"></script>
+</body>
+
+</html>

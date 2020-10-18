@@ -1,0 +1,50 @@
+.association-nav {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    margin-bottom: 10px;
+}
+
+.candidate-content {
+    background-color: #fff;
+    margin: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1);
+}
+
+
+/* 未面试 */
+
+.undone {
+    color: #f00;
+}
+
+
+/* 已面试 */
+
+.done {
+    color: rgb(6, 125, 20);
+}
+
+#start_interview {
+    float: right;
+}
+
+.candidates-summary {
+    font-weight: 700;
+    margin: 5px;
+}
+
+.candidate_group>div {
+    float: left;
+    height: 400px;
+}
+
+.card {
+    width: 40%;
+    margin-right: 20px;
+}
+
+
+/* 提示框样式 */
+
+.toast {
+    position: fixed;
+}
