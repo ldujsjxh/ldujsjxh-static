@@ -1,3 +1,4 @@
+const baseURL = 'http://www.alaskyed.com';
 const interviewStateConstant = {
         doing: 2,
         undone: 0,
@@ -16,7 +17,7 @@ const intervalTime = 10 * 1000;
 setInterval(() => {
     $.ajax({
         type: 'GET', //ajax请求方式: GET/POST, 默认:GET
-        url: 'http://192.168.43.178:8080/java/getNextCandidate',
+        url: `${baseURL}/java/getNextCandidate`,
         success: data => {
             console.log('请求成功');
             // console.log(data);

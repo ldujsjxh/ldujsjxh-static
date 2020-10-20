@@ -1,5 +1,5 @@
 // 基础URL
-const baseURL = 'http://192.168.43.178:8080';
+const baseURL = 'http://www.alaskyed.com';
 
 // toast弹框
 const toastBox = $('#tip_toast');

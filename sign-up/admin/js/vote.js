@@ -1,4 +1,4 @@
-const baseURL = 'http://192.168.43.178';
+const baseURL = 'http://www.alaskyed.com';
 
 // toast弹框
 const toastBox = $('#tip_toast');

@@ -2,7 +2,7 @@ $('#enter').click(() => {
     const pwd = $('#exampleInputEmail1').val();
     $.ajax({
         type: 'POST',
-        url: 'http://192.168.43.178:8080/java/interviewAdmin',
+        url: 'http://www.alaskyed.com/java/interviewAdmin',
         data: {
             adminPasswd: pwd
         },
