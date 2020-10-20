@@ -1,6 +1,7 @@
 // 基础URL
 const baseURL = 'http://www.alaskyed.com';
 
+
 // toast弹框
 const toastBox = $('#tip_toast');
 // toast弹框的消息内容

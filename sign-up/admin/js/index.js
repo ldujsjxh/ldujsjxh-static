@@ -1,5 +1,6 @@
 $('#enter').click(() => {
     const pwd = $('#exampleInputEmail1').val();
+
     $.ajax({
         type: 'POST',
         url: 'http://www.alaskyed.com/java/interviewAdmin',

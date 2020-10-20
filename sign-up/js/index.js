@@ -1,4 +1,5 @@
 const baseURL = 'http://www.alaskyed.com';
+
 const interviewStateConstant = {
         doing: 2,
         undone: 0,
