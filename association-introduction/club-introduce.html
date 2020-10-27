@@ -6,11 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, user-scalable=no">
     <title>社团介绍</title>
-    <link rel="shortcut icon" href="/common/images/favicon.ico">
-
+    <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="/common/css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="club-introduce.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="/common/font/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="/common/css/theme-css/style.default.css" id="theme-stylesheet">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/common/images/favicon.ico">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- 在导航栏自定义nav-container类替代bootstrap原本的container类 -->
     <style>
+         .jumbotron {
+        /* 这里的改动就是视频上说的 */
+        /* margin-left: 12%; */
+         width: 100%;
+        /* height: 530px; */
+        text-align: center;
+        background-image: url(images/club-introduce-head3.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        /* 下面这句代码解决巨幕图片显示问题 */
+        background-size: cover;
+        }
         .nav-container {
             /* 解决宽度问题 */
             padding-left: 10%!important;
@@ -82,13 +104,18 @@
             height: 150px;
             /*right: 30px !important;*/
         }
+        .show {
+            color: cornflowerblue;
+        }
     </style>
 
 </head>
 
 <body>
+     <!-- 头部导航栏 -->
     <section id="navigation"></section>
     <div id="bottom-of-nav"></div>
+    <!-- 引入头部导航栏代码 end -->
 
     <div class="container">
         <div class="jumbotron">
@@ -97,23 +124,21 @@
             <hr class="my-4">
             <a class="btn btn-primary btn-lg" href="#services" role="button">Learn more</a>
         </div>
-        <div class="tm-bg-white-transparent tm-welcome-container">
+        <div class="tm-bg-white-transparent tm-welcome-container" style="margin-top: 7%;">
             <div class="container-fluid">
                 <div class="row h-100">
                     <div class="col-md-6">
                         <div class="tm-welcome-left">
-                            <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
-                            <h2 class="tm-welcome-title" style="margin-top: 5%;">计算机协会简介</h2>
+                            <h2 class="tm-welcome-title" style="margin-top: 5%; color: darkblue;">计算机协会简介</h2>
                             <hr>
                             <p class="pb-0" style="margin-top: 15%;">
                                 信息与电气工程学院计算机协会是一个以普及计算机科学知识，为同学们学习交流计算机知识平台。自协会成立以来，协会始终秉承着“服务大家，锻炼自我，努力成材”的会训，在提高自身电脑技术的同时为大家提供服务。
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <div class="tm-welcome-right">
-                            <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
-                            <h2 class="tm-welcome-title">Introduction to Computer Association</h2>
+                            <h2 class="tm-welcome-title" style="color: darkblue;">Introduction to Computer Association</h2>
                             <hr>
                             <p class="pb-0">
                                 Computer Association of School of information and electrical engineering is a platform for students to learn and exchange computer knowledge by popularizing computer science knowledge. Since the establishment of the association, the association has always
@@ -123,17 +148,18 @@
                     </div>
                 </div>
             </div>
+            <hr>
         </div>
 
         <section id="services">
-            <div class="container">
-                <div class="title">
+            <div class="container" style="margin-top: 7%;">
+                <div class="title" style="color: darkblue;">
                     <h3 class="text-center"><strong>协会介绍</strong><small>(2003-2020)</small></h3>
                 </div>
 
                 <div class="row tm-welcome-left-col" style="margin-top: 5%;">
 
-                    <div class="col-md-11">
+                    <div class="col-md-12">
                         <p>
                             &nbsp; &nbsp; &nbsp; &nbsp;计算机协会成立于2003年9月，在信息科学与技术学院团总支老师的领导下， 面向全校学生自我 管理自我服务，以丰富校园文化，宣传计算机专业知识，推广计算机的应用和 普及为己任， 同时激发同学们对计算机的兴趣，加 强对电脑的运用能力，挺高滋生计算机水平的社团。计算机协会重点发展同学在硬件、 软件、网络方面的技能并发掘和发展计算机 人才，使同学们在计算机领域 得到全方面的发展，拥有更强的社会竞争力。
                         </p>
@@ -168,9 +194,9 @@
 
 
         <section id="special">
-            <div class="container">
+            <div class="container" style="margin-top: 5%;">
                 <div class="title">
-                    <div class="tm-welcome-left">
+                    <div class="tm-welcome-left" style="color: darkblue;">
                         <h3 class="text-center"><strong>社团特色</strong></h3>
                     </div>
                     <hr>
@@ -199,24 +225,23 @@
 
 
 
-        <section id="achievements">
-
+        <section id="achievements" style="margin-top: 5%;">
             <hr>
-            <h3 class="text-center"><strong>成果展示</strong></h3>
+            <h3 class="text-center" style="color: darkblue;"><strong>成果展示</strong></h3>
 
             <div class=" row tm-welcome-left-col">
                 <div class="col-md-6">
                     <div class="container-icon">
-                        <img src="images/club-introduce-logo.jpg" class="img-circle imag-responsive">
+                        <img src="images/club-introduce-logo.jpg" style="width: 67%;margin-top: 5%">
+                    </div>
                         <h4 class="quote-author"><span>全国百强社团</span></h4>
                         <p>在东森国际传媒集团主办的第三届全国高校社团评选活动中获得“全国百强社团”称号 。</p>
-                    </div>
                 </div>
 
-                <div class="col-md-5">
-                    <hr>
+                <div class="col-md-6">
                     <div class="container-icon">
-                        <img src="images/club-introduce-come.jpg" class="img-circle imag-responsive" style="width: 320px;margin-top: 3%"></div>
+                        <img src="images/club-introduce-come.jpg" style="width: 80%;margin-top: 5%">
+                    </div>
                     <h4 class="quote-author">全校十佳社团<span></span></h4>
                     <p>多次获得鲁东大学“全校十佳社团”。</p>
                 </div>
@@ -226,7 +251,7 @@
 
 
         <section id="presidents">
-            <div class="container">
+            <div class="container" style="margin-top: 5%;">
                 <div class="title" style="color: darkblue;">
                     <h3 class="text-center"><strong>协会会长</strong></h3>
                     <h4 class="text-center"><small>(2005年至今)</small></h4>
@@ -402,31 +427,30 @@
                 </div>
             </div>
         </section>
-        <hr>
 
 
 
-        <hr>
+        
         <section id="rule" class="users text-center">
-            <div class="container ">
+            <div class="container " style="margin-top: 5%;color: darkblue;">
                 <hr>
-                <h3 class="text-center" style="color:darkgoldenrod;"><strong>社团章程</strong></h3>
+                <h3 class="text-center" ><strong>社团章程</strong></h3>
                 <h4><small>(点击目录查看详情)</small></h4>
-                <p class="text-info">
+                <p class="text-info" style="height: 40%">
                     <div class="row tm-welcome-left-col">
                         <br/>
                         <div class="col-md-3">
                             <img src="images/club-introduce-back.jpg" class="img-circle imag-responsive my-img" style="width: 250px;">
                         </div>
-                        <div class="btn-group-vertical col-md-6" role="group">
+                        <div class="btn-group-vertical col-md-9" role="group">
                             <div class="accordion" id="accordionExample" style="width: 100%;">
                                 <div class="card">
                                     <!-- 折叠框长度 -->
-                                    <div class="card-header" id="headingOne">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
-                                            <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                第一章 总则
-                              </button>
+                                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                   <i class="show">第一章 总则</i> 
+                                            </button>
                                         </h2>
                                     </div>
 
@@ -444,10 +468,10 @@
                                     </div>
                                 </div>
                                 <div class="card">
-                                    <div class="card-header" id="headingTwo">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                第二章 会员入会和退会
+                                                <i class="show">第二章 会员入会和退会</i>
                               </button>
                                         </h2>
                                     </div>
@@ -467,10 +491,10 @@
                                 </div>
 
                                 <div class="card">
-                                    <div class="card-header" id="headingThree">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  第三章 会员的权利和义务
+                                                <i class="show">第三章 会员的权利和义务</i>
                                 </button>
                                         </h2>
                                     </div>
@@ -492,10 +516,10 @@
                                 </div>
 
                                 <div class="card">
-                                    <div class="card-header" id="headingThree">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    第四章 组织结构
+                                                <i class="show">第四章 组织结构</i>
                                 </button>
                                         </h2>
                                     </div>
@@ -525,10 +549,10 @@
                                 </div>
 
                                 <div class="card">
-                                    <div class="card-header" id="headingThree">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    第五章 纪律制度和奖惩
+                                                <i class="show">第五章 纪律制度和奖惩</i>
                                 </button>
                                         </h2>
                                     </div>
@@ -544,10 +568,10 @@
                                 </div>
 
                                 <div class="card">
-                                    <div class="card-header" id="headingThree">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    第六章 财政开支制度
+                                                <i class="show">第六章 财政开支制度</i>
                                   </button>
                                         </h2>
                                     </div>
@@ -568,10 +592,10 @@
                                 </div>
 
                                 <div class="card">
-                                    <div class="card-header" id="headingThree">
+                                    <div class="card-header">
                                         <h2 class="mb-0">
                                             <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                        第七章 附则
+                                                <i class="show">第七章 附则</i>
                                     </button>
                                         </h2>
                                     </div>
