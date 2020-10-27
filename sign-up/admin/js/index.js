@@ -10,9 +10,9 @@ $('#enter').click(() => {
         success: data => {
             console.log('请求成功', data);
             if (data == 'console') {
-                location.href = '/admin/interview.html';
+                location.href = '/sign-up/admin/interview.html';
             } else if (data == 'interview') {
-                location.href = '/admin/vote.html';
+                location.href = '/sign-up/admin/vote.html';
             } else {
                 $('#psd_wrong').modal('show');
                 $('#psd_wrong').on('hide.bs.modal', () => {
@@ -24,6 +24,7 @@ $('#enter').click(() => {
         },
         error: (XMLHttpRequest, errMsg, errThrown) => {
             alert('网络错误：' + errMsg);
+
         }
     });
 
