@@ -1,19 +1,7 @@
-/*
- * @Author: your name
- * @Date: 2020-05-23 14:31:09
- * @LastEditTime: 2020-05-24 18:05:31
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: \undefinedc:\Users\dell\Desktop\git\ldujsjxh-static\contact-us\js\contact-us.js
- */
-
 //# sourceURL=contact-us.js
 $(function () {
     //引入头部导航栏
     $("#navigation").load("/navigation.html");
-});
-
-$(function () {
     $("#submitInformation").click(function () {
             submit();
             return false;
@@ -71,8 +59,7 @@ function submit() {
         },
         error: function () {
             alert("提交失败!")
-
-
         }
     });
 }
+
