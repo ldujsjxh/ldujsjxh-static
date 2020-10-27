@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>鲁东大学计算机协会</title>
+    <title>联系我们</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -20,18 +20,6 @@
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    <!-- 在导航栏自定义nav-container类替代bootstrap原本的container类 -->
-    <style>
-        .nav-container {
-            /* 解决宽度问题 */
-            padding-left: 10%!important;
-            padding-right: 10%!important;
-            box-sizing: border-box;
-            /* 解决解决区分度不明显问题 */
-            box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
-            margin-bottom: 15px!important;
-        }
-    </style>
 
 </head>
 
@@ -120,6 +108,7 @@
                         <h3 class="h4 text-uppercase mb-0" style="text-align: center;">联系我们</h3>
                     </div>
                     <div class="card-body">
+                        <p class="lead text-primary">欢迎给我们的社团和网站留言提建议! 您的建议就是我们前进的动力!</p>
                         <p class="lead">如果你有要维修的电脑,或者有需要安装的软件,或者有想要的资源和教程, 可以联系我们的官方QQ(鲁小C)或者在下面留言区留言哦(留言可能回复不及时,建议联系鲁小C)。
                         </p>
                         <form class="form-horizontal">
@@ -133,7 +122,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 form-control-label">学院:</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="myCollege" placeholder="College">
+                                    <input type="text" class="form-control" id="myAcademy" placeholder="Academy">
 
                                 </div>
                             </div>
@@ -162,62 +151,23 @@
 
                             <div class="form-group">
                                 <div style="text-align: center;">
-                                    <button type="submit" class="btn btn-primary fa fa-paper-plane center-block" id="submitInformation">&nbsp;&nbsp;确认发送</button>
+                                    <button class="btn btn-primary fa fa-paper-plane center-block" id="submitInformation">&nbsp;&nbsp;确认发送</button>
                                     <small class="form-text text-muted ml-3 h6">提示：点击确认发送后，请耐心等待服务器响应。</small>
+                                    <small class="form-text text-muted ml-3 h6">提交成功后，请等待我们的官方QQ与您取得联系，您也可以直接添加我们的官方QQ进行询问。</small>
                                 </div>
-
-
-
                             </div>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
-            $(function() {
-                // 加载导航栏
-                $('#navigation').load('/navigation.html', function() {
-                    // 导航栏修饰
-                    // console.log('navbar', $('#navigation nav'));
-                    $('#navigation nav').removeClass('fixed-top');
-                    $('#navigation nav').removeClass('container');
-                    $('#navigation nav').addClass('nav-container');
-                    // 让屏幕下滚的距离大于导航栏的高度时，让导航栏始终出现在屏幕上方（使用flex布局），否则使用普通布局 --start
-                    // 获取导航栏高度
-                    var box_top = $("#bottom-of-nav").offset().top;
-                    var flag = true;
-                    $(window).scroll(function() {
-                        if ($(document).scrollTop() >= box_top) {
-                            // 卷去头部
-                            $(".nav-container").addClass('fixed-top');
-                            if (flag) {
-                                $(".nav-container").stop().fadeOut(0);
-                                $(".nav-container").stop().fadeIn();
-                                flag = false;
-                            }
-                        } else {
-                            // 未卷去头部
-                            $(".nav-container").removeClass('fixed-top');
-                            flag = true;
-                        }
-                    });
-                    // --end
+    </div>
 
-                    //点击按钮隐藏或显示菜单栏, 暂时没用
-                    $('.sidebar-toggler').click(function() {
-                        $('.sidebar').toggleClass('shrink show');
-                    });
-                });
 
-            });
+<!--custom-script-->
+<script src="/common/js/random-theme.js"></script>
 
-            // 联系我们事件
-            $('#submitInformation').click(function(e) {
-                alert('该功能暂未开放，有问题请联系鲁小C QQ：2772136373');
-            });
-        </script>
+
 </body>
 
 </html>

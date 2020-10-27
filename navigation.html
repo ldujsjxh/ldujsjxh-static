@@ -1,9 +1,32 @@
 <!--头部导航栏-->
-<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light container">
+<style>
+    /*导航栏下移一部分, 防止导航栏遮挡*/
+    body {
+        margin-top: 100px;
+
+    }
+    /*设置导航栏透明度*/
+    .fixed-top {
+        background-color: #ffffff;
+        filter: alpha(Opacity=90);
+        -moz-opacity: 0.9;
+        opacity: 0.9;
+    }
+    .nav-container {
+        /* 解决宽度问题 */
+        padding-left: 10%!important;
+        padding-right: 10%!important;
+        box-sizing: border-box;
+        /* 解决解决区分度不明显问题 */
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px!important;
+    }
+</style>
+<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light nav-container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headNavbarMenu" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="nav-link text-lg text-primary navbar-brand" href="#">鲁东大学计算机协会</a>
+    <a class="nav-link text-lg text-primary " href="/">鲁东大学计算机协会</a>
 
     <div class="collapse navbar-collapse" id="headNavbarMenu">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -17,8 +40,11 @@
                 <a class="nav-link" href="/departments-introduction/departments-introduction.html">部门介绍</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/repair/repair.html">义务维修</a>
+                <a class="nav-link" href="/computer-knowledge/hot-key.html">电脑小知识</a>
             </li>
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="/repair/repair.html">义务维修</a>-->
+<!--            </li>-->
             <li class="nav-item">
                 <a class="nav-link" href="/contact-us/contact-us.html">联系我们</a>
             </li>
@@ -50,4 +76,12 @@
         e.preventDefault()
         alert('该功能暂未开放');
     });
+</script>
+<script>
+    function fix_the_nav() {
+        if(window.location.hash){
+            var target = $(location.hash);
+            $("body,html").scrollTop(target.offset().top-100); // my nav size is 100px
+        }
+    }
 </script>
