@@ -67,9 +67,14 @@ function getMemberListByDep(depStr) {
             type: 'POST',
             url: baseURL + '/java/getCondidatesByDepartment/' + depStr,
             success: data => {
+                setTimeout(() => {
+
+                    toastBox.toast('hide');
+                    toastProgressBar.hide();
+                }, 1000);
+
                 resolve(data);
-                toastBox.toast('hide');
-                toastProgressBar.hide();
+
             },
             error: (XMLHttpRequest, errMsg, errThrown) => { //请求失败调用
                 console.log('获取【' + depStr + '】成员列表失败');
@@ -266,6 +271,7 @@ function memberWaiting(candidateId) {
             if (data === 'yes') {
                 //成功,更新UI
                 updateCurrentUI();
+
                 toastBox.toast('hide');
                 resetToast();
             }

@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>计协报名</title>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/interview/bootstrap/css/bootstrap.min.css">
 </head>
 
 <body>
 
     <img class="logo" src="images/logo.png">
 
-    <div class="card-group">
+    <div class="card-group clearfix">
         <div class="card" id="currentCandidate">
             <div class="my-card-head">正在面试</div>
             <div class="my-card-body">
@@ -33,9 +34,20 @@
             </div>
         </div>
 
-    </div>
 
     </div>
+
+
+    <div class="tips-info">
+        <div class="qr-code">
+            <img src="./images/add_info_qrcode.png" alt="">
+        </div>
+        <div class="desc">
+            请到来的同学们扫描二维码登记个人信息，登记一次即可
+        </div>
+    </div>
+
+
     <audio src="Moment.ogg" style="display: none;" id="change_music"></audio>
     <script src="extrajs/jquery-3.4.1.min.js"></script>
     <script src="js/index.js"></script>

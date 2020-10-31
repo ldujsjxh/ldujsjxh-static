@@ -10,9 +10,9 @@ $('#enter').click(() => {
         success: data => {
             console.log('请求成功', data);
             if (data == 'console') {
-                location.href = '/sign-up/admin/interview.html';
+                location.href = '/interview/admin/interview.html';
             } else if (data == 'interview') {
-                location.href = '/sign-up/admin/vote.html';
+                location.href = '/interview/admin/vote.html';
             } else {
                 $('#psd_wrong').modal('show');
                 $('#psd_wrong').on('hide.bs.modal', () => {
