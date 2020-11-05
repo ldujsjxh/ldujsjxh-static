@@ -64,7 +64,8 @@ function renderPage(memberInfos) {
                 $('#currentCandidate .my-card-head').text('正在面试');
                 $('#currentCandidate .name').text(info.candidateName);
                 $('#currentCandidate .stu_id').text('学号：' + info.candidateStuId);
-                $('#currentCandidate .part').text('部门：' + info.desirableDepartment);
+                //此次面试隐藏部门
+                // $('#currentCandidate .part').text('部门：' + info.desirableDepartment);
                 $('#currentCandidate .adddress').text('地点：' + '逸夫楼210计协办公室');
 
             } else if (interviewCode == interviewStateConstant.wating) {
@@ -73,7 +74,8 @@ function renderPage(memberInfos) {
                 $('#nextCandidate .my-card-head').text('下一位准备');
                 $('#nextCandidate .name').text(info.candidateName);
                 $('#nextCandidate .stu_id').text('学号：' + info.candidateStuId);
-                $('#nextCandidate .part').text('部门：' + info.desirableDepartment);
+                //此次面试隐藏部门
+                // $('#nextCandidate .part').text('部门：' + info.desirableDepartment);
                 $('#nextCandidate .adddress').text('地点：' + '逸夫楼210计协办公室');
 
             }
