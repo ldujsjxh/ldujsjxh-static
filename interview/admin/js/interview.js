@@ -180,7 +180,7 @@ function getHtmlFromTemplate(memberList, depStr) {
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">姓名</th>
-                                    <th scope="col">学号</th>
+                                    <th scope="col">QQ</th>
                                     <th scope="col">学院</th>
                                     <th scope="col">意向部门</th>
                                     <th scope="col">面试平均分</th>
@@ -245,6 +245,7 @@ function getHtmlFromTemplate(memberList, depStr) {
                                     <td class="${stateClass}">${stateStr}</td>
                                     <td>
                                         <button type="button" class="btn ${(state === interviewStateConstant.doing || state === interviewStateConstant.wating) ?'btn-danger':'btn-primary'}" onclick="${stateClick}"${state === interviewStateConstant.done ? 'disabled':''}>${btnText}</button>
+                                        <button type="button" class="btn btn-danger" onclick="deleteMemberInfo('${candidateId}')">删除</button>
                                     </td>
                                 </tr>
             `;
@@ -255,6 +256,37 @@ function getHtmlFromTemplate(memberList, depStr) {
     return template;
 }
 
+// 删除按钮点击事件
+function deleteMemberInfo(candidateId) {
+    // console.log(candidateId);
+
+    toastMsgBox.html('正在同步......');
+    toastProgressBar.show();
+    toastBox.toast('show');
+    // 发送ajax请求
+    $.ajax({
+        type: 'POST',
+        url: `${baseURL}/java/deleteCondidatesById`,
+        data: {
+            candidateId: candidateId
+        },
+        success: data => {
+            if (data === 'yes') {
+                //成功,更新UI
+                updateCurrentUI();
+
+                toastBox.toast('hide');
+                resetToast();
+            }
+
+        },
+        error: (xmlHttpRequest, errMsg, errThrown) => {
+            autoHideToast('请求失败,错误信息见控制台', false);
+            console.log(errMsg);
+
+        }
+    });
+}
 // 等待按钮点击事件
 function memberWaiting(candidateId) {
     toastProgressBar.show();

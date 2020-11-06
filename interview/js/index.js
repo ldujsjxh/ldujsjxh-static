@@ -63,7 +63,7 @@ function renderPage(memberInfos) {
                 // 正在面试
                 $('#currentCandidate .my-card-head').text('正在面试');
                 $('#currentCandidate .name').text(info.candidateName);
-                $('#currentCandidate .stu_id').text('学号：' + info.candidateStuId);
+                $('#currentCandidate .stu_id').text('QQ：' + info.candidateStuId);
                 //此次面试隐藏部门
                 // $('#currentCandidate .part').text('部门：' + info.desirableDepartment);
                 $('#currentCandidate .adddress').text('地点：' + '逸夫楼210计协办公室');
@@ -73,7 +73,7 @@ function renderPage(memberInfos) {
                 // 下一位准备
                 $('#nextCandidate .my-card-head').text('下一位准备');
                 $('#nextCandidate .name').text(info.candidateName);
-                $('#nextCandidate .stu_id').text('学号：' + info.candidateStuId);
+                $('#nextCandidate .stu_id').text('QQ：' + info.candidateStuId);
                 //此次面试隐藏部门
                 // $('#nextCandidate .part').text('部门：' + info.desirableDepartment);
                 $('#nextCandidate .adddress').text('地点：' + '逸夫楼210计协办公室');
